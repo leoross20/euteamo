@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Dia dos Namorados ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Feliz Dia dos Namorados, meu amor! 💖</h1>
+
+  <div class="counter">
+    Estamos juntos há <span id="timeTogether"></span>!
+  </div>
+
+  <div class="carousel" id="photoCarousel">
+    <img src="/images/foto1.png" alt="Foto 1">
+    <img src="/images/foto2.png" alt="Foto 2">
+    <img src="/images/foto6.png" alt="Foto 3">
+    <img src="/images/foto4.png" alt="Foto 4">
+    <img src="/images/foto5.png" alt="Foto 5">
+    <img src="/images/foto7.png" alt="Foto 6">
+    <img src="/images/foto8.png" alt="Foto 7">
+    <img src="/images/foto9.png" alt="Foto 8">
+    <img src="/images/foto10.png" alt="Foto 9">
+    <img src="/images/foto11.png" alt="Foto 10">
+    <img src="/images/foto12.png" alt="Foto 11">
+    <img src="/images/foto13.png" alt="Foto 12">
+    <img src="/images/foto14.png" alt="Foto 13">
+    <img src="/images/foto15.png" alt="Foto 14">
+    <img src="/images/foto16.png" alt="Foto 15">
+  </div>
+
+  <div class="romantic-text">
+    Desde que você entrou na minha vida, tudo ficou mais bonito. Cada segundo ao seu lado é um presente, cada sorriso seu é um poema que meu coração guarda com carinho. Que este seja apenas um de muitos Dias dos Namorados que vamos comemorar juntos. Te amo infinitamente! 💘
+  </div>
+
+  <video controls>
+    <source src="/videos/video-romantico.mp4" type="video/mp4">
+  </video>
+
+  <script>
+    const startDate = new Date("2023-05-08T00:00:00");
+    const timeElement = document.getElementById("timeTogether");
+
+    function updateCounter() {
+      const now = new Date();
+      let totalSeconds = Math.floor((now - startDate) / 1000);
+
+      const days = Math.floor(totalSeconds / 86400);
+      totalSeconds %= 86400;
+      const hours = Math.floor(totalSeconds / 3600);
+      totalSeconds %= 3600;
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+
+      timeElement.textContent = `${days} dias, ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCounter, 1000);
+    updateCounter();
+  </script>
+
+</body>
+</html>

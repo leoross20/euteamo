@@ -1,0 +1,59 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f1aec9;
+  color: #5d1049;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.counter {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.carousel img {
+  height: 300px;
+  scroll-snap-align: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+.romantic-text {
+  margin: 40px auto;
+  font-size: 1.2em;
+  max-width: 600px;
+  line-height: 1.6;
+  background-color: #ffe0ec;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+video {
+  margin-top: 30px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
